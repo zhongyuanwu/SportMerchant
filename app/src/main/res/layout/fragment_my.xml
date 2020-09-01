@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv_head"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="@dimen/dp_20"
+        android:src="@mipmap/photo"
+        tools:ignore="MissingConstraints" />
+    <TextView
+        android:id="@+id/tv_out_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="@dimen/dp_10"
+        android:layout_marginTop="@dimen/dp_10"
+        android:padding="5dp"
+        android:text="退出登录"
+        android:textSize="16dp"
+        tools:ignore="MissingConstraints" />
+    <TextView
+        android:id="@+id/tv_userName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_head"
+        android:layout_marginTop="@dimen/dp_10"
+        android:text="valar"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        tools:ignore="MissingConstraints" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_userName"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="40dp"
+        android:text="中心钱包"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        tools:ignore="MissingConstraints" />
+    <TextView
+        android:id="@+id/tv_balance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_userName"
+        android:layout_marginRight="32dp"
+        android:layout_marginTop="40dp"
+        android:text="888888"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        tools:ignore="MissingConstraints" />
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_balance"
+        android:layout_marginTop="@dimen/dp_20"
+        android:background="@color/black"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/tv_bet_record"
+        android:layout_width="82dp"
+        android:layout_height="82dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="16dp"
+        android:text="投注记录"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:background="@drawable/shape_5dp_gray_stroke"
+        tools:ignore="MissingConstraints" />
+</androidx.constraintlayout.widget.ConstraintLayout>

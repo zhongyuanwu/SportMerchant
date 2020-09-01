@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:mv="http://schemas.android.com/apk/res-auto"
+    android:layout_width="150dp"
+    android:layout_height="48dp"
+    android:clipChildren="false"
+    android:clipToPadding="false">
+
+    <TextView
+        android:id="@+id/tv_tab_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:singleLine="true"
+        android:text="Android" />
+
+    <com.panda.flycotablayout.widget.MsgView
+        android:id="@+id/rtv_msg_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@drawable/msg_color"
+        android:textSize="11.5sp"
+        android:visibility="gone"
+        mv:mv_backgroundColor="@android:color/transparent"
+        mv:mv_isRadiusHalfHeight="true"
+        mv:mv_strokeColor="#ffffff"
+        mv:mv_strokeWidth="0dp" />
+
+
+    <TextView
+        android:id="@+id/tv_msg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_msg_tip_bg"
+        android:gravity="center"
+        android:minWidth="20dp"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:text="1"
+        android:textColor="#666666"
+        android:textSize="10sp"
+        android:visibility="gone" />
+</RelativeLayout>

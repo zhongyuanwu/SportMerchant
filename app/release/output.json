@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "artifactType": {
+    "type": "APK",
+    "kind": "Directory"
+  },
+  "applicationId": "com.example.sport_merchant",
+  "variantName": "release",
+  "elements": [
+    {
+      "type": "SINGLE",
+      "filters": [],
+      "properties": [],
+      "versionCode": 6,
+      "versionName": "6",
+      "enabled": true,
+      "outputFile": "sport_merchant_20200830180826_1.6.apk"
+    }
+  ]
+}

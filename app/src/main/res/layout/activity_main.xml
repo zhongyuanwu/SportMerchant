@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.MainActivity">
+
+    <FrameLayout
+        android:id="@+id/fl_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/tab_bottom"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <com.panda.flycotablayout.CommonTabLayout
+        android:id="@+id/tab_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:tl_iconGravity="TOP"
+        app:tl_iconHeight="24dp"
+        app:tl_iconWidth="24dp"
+        app:tl_indicator_height="0dp"
+        app:tl_textSelectColor="#FFD2B79C"
+        app:tl_textUnselectColor="#FF9AA4C2"
+        app:tl_textsize="12sp"
+        app:tl_underline_color="#FFD2B79C"
+        tools:ignore="MissingConstraints" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

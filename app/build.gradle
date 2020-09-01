@@ -1,0 +1,86 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.3"
+
+    defaultConfig {
+        applicationId "com.example.sport_merchant"
+        minSdkVersion 21
+        targetSdkVersion 29
+        versionCode 6
+        versionName "1.6"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    signingConfigs {
+        debug {
+            storeFile file('../app/sport_merchant.jks')//签名文件路径
+            storePassword "sport123456"
+            keyAlias "sport_key"
+            keyPassword "sport123456"  //签名密码
+            println("====== signingConfigs.debug ======")
+        }
+        release {
+            storeFile file('../app/sport_merchant.jks')//签名文件路径
+            storePassword "sport123456"
+            keyAlias "sport_key"
+            keyPassword "sport123456"  //签名密码
+            println("====== signingConfigs.release ======")
+        }
+    }
+
+    buildTypes {
+        debug {
+            //是否混淆
+            minifyEnabled false
+            //是否移除无用资源
+            zipAlignEnabled true
+            //混淆的配置文件
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.debug
+        }
+        release {
+            //是否混淆
+            minifyEnabled false
+            //是否移除无用资源
+            zipAlignEnabled true
+            //混淆的配置文件
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+    }
+    applicationVariants.all {
+        variant ->
+            variant.outputs.all {
+                def date = new Date().format("yyyyMMddHHmmss",TimeZone.getTimeZone("GMT+08"))
+                outputFileName = "sport_merchant_${date}_${versionName}.apk"
+            }
+    }
+
+    lintOptions {
+        disable 'InvalidPackage'
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation project(path: ':base')
+    implementation project(path: ':flycotablayout')
+    implementation 'com.just.agentweb:agentweb:4.1.4'
+}

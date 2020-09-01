@@ -1,0 +1,4 @@
+include ':flycotablayout'
+include ':base'
+include ':app'
+rootProject.name = "Sport-Merchant"
